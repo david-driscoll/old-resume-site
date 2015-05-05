@@ -1,0 +1,478 @@
+@green: #0066cc;
+@medium-gray: #dcdcdc;
+@light-gray: #eee;
+@tablet-scale: 0.8;
+@mobile-scale: 0.7;
+@mobile-small-scale: 0.6;
+
+@image-width: 300px;
+@header-width: 560px;
+@header-h1: 52px;
+@header-h3: 30px;
+@header-list-text: 18px;
+
+@dt-width: 150px;
+@dt-text: 20px;
+@dd-width: 630px;
+@dd-scale: (@dd-width * (@dd-width / (@dd-width+@dt-width)));
+@dt-scale: (@dt-width * (@dt-width / (@dd-width+@dt-width)));
+
+.resume
+{
+	.clear	{
+		float: none;
+		clear: both;
+		margin: 20px 0px 20px 0px;
+	}
+
+	/* Header */
+	section.contact-details
+	{
+		.image
+		{
+			float: left;
+			text-align: center;
+			margin: 40px 0px 0px 20px;
+			width: @image-width;
+
+			img
+			{
+				//border: #fff solid 4px;
+				//background: url("Images/Resume/bg_img_dark_blue.png"); 
+				//margin: 10px 0px 0px 0px;
+				width: 100%;
+			}
+		}
+
+	    header
+		{
+			float: left;
+			padding: 40px 0px 0px 25px;
+			width: @header-width;
+
+			a
+			{
+				font-weight: normal;
+			}
+
+			h1
+			{
+				margin: 0px 0px 0px 20px;
+				font-size: @header-h1;
+				font-weight: bold;
+			}
+
+			h3
+			{
+				margin: 12px 0px 32px 20px;
+				font-size: @header-h3;
+				font-weight: bold;
+				font-style: italic;
+			}
+
+			ul
+			{
+				list-style: none;
+				margin: 0px 0px 0px -12px;
+
+				li
+				{
+					background-position: 0px 0px;
+					padding: 0px 0px 12px 40px;
+				}
+
+				li.address
+				{
+					background: url("Images/Resume/home.png") no-repeat;
+				}
+
+				li.phone
+				{
+					background: url("Images/Resume/phone.png") no-repeat;
+				}
+
+				li.email
+				{
+					background: url("Images/Resume/mail.png") no-repeat;
+				}
+
+				li.site_url
+				{
+					background: url("Images/Resume/computer.png") no-repeat;
+				}
+
+				li.twitter
+				{
+					background: url("Images/Resume/twitter_sm.png") no-repeat;
+				}
+			}
+		}
+
+		@media all and (max-width: 400px)
+		{
+			.resume section.contact-details header
+			{
+				width: 90%;
+
+				h1
+				{
+					font-size: @header-h1 * @mobile-scale;
+					text-align: center;
+				}
+
+				h3
+				{
+					font-size: @header-h3 * @mobile-scale;
+					text-align: center;
+				}
+
+				ul
+				{
+					font-size: @header-list-text * @mobile-scale;
+					padding: 0;
+				}
+			}
+		}
+
+		@media all and (min-width: 401px) and (max-width: 600px)
+		{
+			.resume section.contact-details header
+			{
+				width: 100%;
+
+				h1
+				{
+					font-size: @header-h1 * @mobile-scale;
+					text-align: center;
+				}
+
+				h3
+				{
+					font-size: @header-h3 * @mobile-scale;
+					text-align: center;
+				}
+
+				ul
+				{
+					font-size: @header-list-text * @mobile-scale;
+					padding: 0;
+				}
+			}
+		}
+
+		@media all and (min-width: 601px) and (max-width: 800px)
+		{
+			.resume section.contact-details header
+			{
+				width: 70%;
+
+				h1
+				{
+					font-size: @header-h1 * @tablet-scale;
+				}
+
+				h3
+				{
+					font-size: @header-h3 * @tablet-scale;
+				}
+
+				ul
+				{
+					font-size: @header-list-text * @tablet-scale;
+				}
+			}
+		}
+
+	}
+
+	/* Main Content */
+	h2.top
+	{
+		margin: 0px; 
+		font-size: 22px;
+		font-weight: bold;
+
+		.team
+		{
+			display: block;
+			font-size: 14px;
+		}
+	}
+
+	h2
+	{
+		margin: 40px 0px 0px 0px; 
+		font-size: 22px;
+		font-weight: bold;
+	}
+
+
+	dl
+	{
+		margin: 0px 50px 0px 0px;
+	}
+
+
+	dt
+	{
+		float: left;
+		width: @dt-width;
+		font-size: @dt-text;
+		font-weight: bold;
+		font-style: italic;
+		text-align: right;
+	}
+
+	dd
+	{
+		width: @dd-width; 
+		float: right;
+		margin-right: 10px;
+	}
+
+	@media all and (max-width: 400px)
+	{
+		.resume
+		{
+			dl
+			{
+				margin-right: 10px;
+			}
+
+			dt
+			{
+				width: @dt-width * @mobile-scale;
+				font-size: @dt-text * @mobile-scale;
+				text-align: left;
+			}
+				
+			dd
+			{
+				width: 88%;
+				margin-left: 16px;
+				margin-right: 16px;
+			}
+
+			dd.skills
+			{
+				margin-left: 60px;
+			}
+		}
+	}
+
+	@media all and (min-width: 401px) and (max-width: 600px)
+	{
+		.resume
+		{
+			dl
+			{
+				margin-right: 10px;
+			}
+
+			dt
+			{
+				width: @dt-width * @mobile-scale;
+				font-size: @dt-text * @mobile-scale;
+				text-align: left;
+			}
+				
+			dd
+			{
+				width: 88%;
+				margin-left: 80px;
+				text-align: left;
+			}
+
+			dd.skills
+			{
+				margin-left: 60px;
+			}
+		}
+	}
+
+	@media all and (min-width: 601px) and (max-width: 800px)
+	{
+		.resume
+		{
+			dt
+			{
+				width: @dt-width * @tablet-scale;
+				font-size: @dt-text * @tablet-scale;
+			}
+				
+			dd
+			{
+				width: 88%;
+			}
+		}
+	}
+
+	dl#contact
+	{
+		margin: 0px;
+	}
+
+	dt#contact
+	{
+		margin: 0px;
+	}
+
+	dd#contact
+	{
+		margin: 0px;
+	}
+
+	p.bus1
+	{
+		margin: 0px;
+		font-weight: bold;
+		color: @green;
+	}
+
+	p.edu-info
+	{
+		margin: 10px 0px 0px 0px;
+		font-weight: bold;
+		color: @green;
+	}
+
+	p.time
+	{
+		margin: 0px;
+	}
+
+	p.summary
+	{
+		margin: 10px 0px 0px 0px;
+	}
+
+
+	#skills
+	{
+		ul
+		{	
+			float: left;
+			list-style: none;
+			margin: 0;
+			width: 220px;
+			padding: 0;
+
+			&:first-child
+			{	
+				//margin-left: -40px;
+			}
+
+			li
+			{
+				background: url("Images/Resume/bullet_blue.png") no-repeat;
+				background-position: 0px 2px;
+				padding: 0px 0px 0px 25px;
+			}
+		}
+	}
+
+
+	@media all and (max-width: 400px)
+	{
+		.resume
+		{
+			#skills
+			{
+				ul.list1
+				{
+					margin-left: 0px;
+				}
+			}
+		}
+	}
+
+	@media all and (min-width: 401px) and (max-width: 600px)
+	{
+		.resume
+		{
+			#skills
+			{
+				ul.list1
+				{
+					margin-left: 0px;
+				}
+			}
+		}
+	}
+
+	@media all and (min-width: 601px) and (max-width: 800px)
+	{
+		.resume
+		{
+
+		}
+	}
+
+	abbr	{
+		border-width: 0px;
+	}
+
+	/* Footer */
+	#footer
+	{
+		margin: 60px 40px 0px 40px;
+		img {
+			border: 0px;
+		}
+
+		.footer_content
+		{
+			width: 700px;
+			overflow: auto;
+			margin: auto;
+			border: #fff solid 2px;
+			background-color: @medium-gray;
+		}
+
+		ul.icons_1
+		{
+			float: left;
+			width: 525px;
+			margin: 15px 10px 10px 15px;
+			padding: 0px;
+		}
+
+		ul.icons_2
+		{
+			float: right;
+			width: 100px;
+			margin: 10px 20px 10px 10px;
+			padding: 0px;
+		}
+
+		.icons_1 li, .icons_2 li
+		{ 
+			margin: 0px 0px 0px 7px; 
+			padding: 0px; 
+			list-style-type: none; 
+			display: inline; 
+		}
+
+		a
+		{
+			color: #000;
+			&:hover
+			{
+				color: @green;
+			}
+		}
+
+		.credits
+		{
+			float: none;
+			clear: both;
+			margin: 10px 0px 20px 0px;
+			font-size: 8px;
+			text-align: center;
+			a
+			{
+				font-weight: normal;
+			}
+		}
+	}
+}

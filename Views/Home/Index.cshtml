@@ -1,0 +1,14 @@
+﻿@model Home.V2.Models.PageModel
+@{
+    ViewBag.Title = Model.Title;
+    ViewBag.Description = Model.Description;
+
+    if (Model.Css != null)
+    {
+        foreach (var item in Model.Css)
+        {
+            <link href="@item" rel="stylesheet" type="text/css" />
+        }
+    }
+}
+@Html.Raw(Model.Content)

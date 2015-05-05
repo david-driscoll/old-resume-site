@@ -1,0 +1,1 @@
+xcopy ..\Scripts\thrust-js\*.* ..\Scripts\thrust-copy\ /D /R /S /Y /C /I

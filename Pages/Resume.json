@@ -1,0 +1,5 @@
+﻿{
+    Title: "Résumé of David Driscoll",
+    Description: "The Résumé of .NET / Web / JavaScript Developer - David Driscoll based in Edmonton, Alberta, Canada.  Please feel free to contact David Driscoll for any web development needs.",
+    Css: ["/Content/resume.less"]
+}

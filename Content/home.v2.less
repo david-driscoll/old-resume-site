@@ -1,0 +1,24 @@
+﻿@import "less/mixins.less";
+
+.image.thumbnail {
+    height: auto;
+    width: auto;
+    display: inline-block;
+    .border-radius(8px);
+    padding: 0;
+    border-width: 2px;
+    img {
+        .border-radius(7px);
+    }
+}
+
+.content-container {
+    //opacity: 0;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+
+    //&.fade-in{
+    //    opacity: 1;
+    //}
+}

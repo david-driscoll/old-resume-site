@@ -1,0 +1,30 @@
+﻿<article class="page @(Model != null ? Model.Type.ToLower() : "")">
+    <header class="article large bg">
+        <h1 class="Title">@(Model != null ? Model.Title : "")</h1>
+    </header>
+    <p>
+        The outcomes of this project for the students were as follows:
+        <ul>
+            <li>Work as a team with a focus of responsibilities and abilities.</li>
+            <li>Create a 3D rendered "Tank" style game</li>
+            <li>Experience C++ .NET</li>
+            <li>Work with and figure out Sockets.</li>
+        </ul>
+        <a href="@Url.Content("~/Content/Files/Portfolio/CNT452 - Tank Game/game.zip")">Game Executable</a> and <a href="@Url.Content("~/Content/Files/Portfolio/CNT452 - Tank Game/source.zip")">Source</a> are available.<br /><br />
+
+        <div class="image">
+            <img src="@Url.Content("~/Content/Files/Portfolio/CNT452%20-%20Tank%20Game/StartScreen.jpg")" alt="The game Start Screen" /><br />
+            Above is the Start Screen of the game.
+        </div>
+
+        <div class="image">
+            <img src="@Url.Content("~/Content/Files/Portfolio/CNT452%20-%20Tank%20Game/Game.jpg")" alt="The game in play" /><br />
+            This is the game in play.
+        </div>
+
+        <div class="image">
+            <img src="@Url.Content("~/Content/Files/Portfolio/CNT452%20-%20Tank%20Game/Server.jpg")" alt="The game server showing the game in play" /><br />
+            This is the server view of the game, that monitors the action and gives a 2D representation of the game.
+        </div>
+    </p>
+</article>
